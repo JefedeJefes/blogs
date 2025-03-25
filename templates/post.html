@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Blogs</title>
+    <link href="https://fonts.googleapis.com/css2?family=Raleway" rel="stylesheet">
+    <link rel="stylesheet" href="../static/css/styles.css">
+</head>
+<body>
+<div class="wrapper">
+    <div class="top">
+        <div class="title"><h1>My Blog</h1></div>
+    </div>
+    <div class="content">
+        {% if show_data %}
+        <div class="card">
+            <h2>{{ show_data[0]["title"] }}</h2>
+            <h2>{{ show_data[0]["subtitle"] }}</h2>
+            <p>{{ show_data[0]["body"] }}</p>
+        </div>
+        {% else %}
+        <p>No data available.</p>
+        {% endif %}
+    </div>
+</div>
+
+<footer>
+    <p>Made with ♥️ in London.</p>
+</footer>
+</body>
+</html>

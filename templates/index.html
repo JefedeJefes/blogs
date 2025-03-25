@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Blogs</title>
+    <link href="https://fonts.googleapis.com/css2?family=Raleway" rel="stylesheet">
+    <link rel="stylesheet" href="../static/css/styles.css">
+</head>
+<body>
+<div class="wrapper">
+    <div class="top">
+        <div class="title"><h1>My Blog</h1></div>
+    </div>
+    <div class="content">
+        {% for get_data in data %}
+        <div class="card">
+            <h2>{{ get_data["title"] }}</h2>
+            <p class="text">{{ get_data["subtitle"] }}</p>
+            <a href="{{ url_for('get_data', get_id=get_data['id']) }}">Read</a>
+        </div>
+        {% endfor %}
+    </div>
+</div>
+
+<footer>
+    <p>Made with ♥️ by Arjun.</p>
+</footer>
+
+</body>
+</html>
